@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>Demo | CatBot</title> 
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="theme-color" content="#ef473a">
+<meta name="msappliuserion-navbutton-color" content="#ef473a">
+<meta name="apple-mobile-web-app-status-bar-style" content="#ef473a">
+<meta name="appliuserion-name" content="CatBot">
+<meta name="theme-color" content="#ef473a">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="header">
+	<div id="inner">
+		<div id="heading">CatBot</div>
+		<div id="subTitle">Active Now</div>
+	</div>
+</div>
+
+<div id="transcript"></div>
+
+<div id="suggestionOverlay">
+	<div id="suggestionsInner">
+		<div id="suggestionsTextBg"></div>
+		<div class="suggestionsText">Suggestions <span id="suggestionsClose" onclick="hideSuggestions()">x</span></div>
+		<div id="suggestionsParent">
+			<div class="suggestion" onclick="sendSuggestion(this)">Initial Suggestion 1</div>
+			<div class="suggestion" onclick="sendSuggestion(this)">Initial Suggestion 2</div>
+			<div class="suggestion" onclick="sendSuggestion(this)">Initial Suggestion 3</div>
+		</div>
+	</div>
+</div>
+
+<div id="form">
+	<input type="text" placeholder="How can we help you today?" autocomplete="off"  id="q" onkeypress="detectEnter(event)" />
+	<input type="submit" id="sbtn" value="Send" onclick='send()'>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="app.js"></script>
+</html>
